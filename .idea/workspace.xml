@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63577d52-07a8-405d-b938-14d0c4e2fe3a" name="Changes" comment="Added ChakraProvider with custom theme to the _app.">
+    <list default="true" id="63577d52-07a8-405d-b938-14d0c4e2fe3a" name="Changes" comment="Moved styles folder inside core.">
+      <change afterPath="$PROJECT_DIR$/pages/signin.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/SignIn/SignIn.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screens/SignIn/SignInForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/core/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +56,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651662352293</updated>
-      <workItem from="1651662353937" duration="2111000" />
+      <workItem from="1651662353937" duration="2259000" />
     </task>
     <task id="LOCAL-00001" summary="Installed all major required dependencies and updated gitignore.">
       <created>1651662548500</created>
@@ -84,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651665324802</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Moved styles folder inside core.">
+      <created>1651665364934</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1651665364934</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +116,7 @@
     <MESSAGE value="Deleted useless boilerplate code." />
     <MESSAGE value="Updated tsconfig to use absolute paths." />
     <MESSAGE value="Added ChakraProvider with custom theme to the _app." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ChakraProvider with custom theme to the _app." />
+    <MESSAGE value="Moved styles folder inside core." />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved styles folder inside core." />
   </component>
 </project>
