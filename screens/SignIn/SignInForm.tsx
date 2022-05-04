@@ -1,18 +1,18 @@
-import { FC } from "react";
+import { FC } from 'react'
 import {
   Button,
   FormControl,
   FormErrorMessage,
   FormLabel,
   Input,
-} from "@chakra-ui/react";
-import { SubmitHandler, useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
+} from '@chakra-ui/react'
+import { SubmitHandler, useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
+import * as yup from 'yup'
 
 interface SingInFormInputs {
-  email: string;
-  password: string;
+  email: string
+  password: string
 }
 
 const SignInFormInputsSchema = yup
@@ -20,24 +20,24 @@ const SignInFormInputsSchema = yup
     email: yup.string().email().required(),
     password: yup.string().min(8).required(),
   })
-  .required();
+  .required()
 
 const SingInForm: FC = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitted, isSubmitting },
+    formState: { errors, isSubmitting },
   } = useForm<SingInFormInputs>({
     resolver: yupResolver(SignInFormInputsSchema),
-  });
+  })
 
-  const onSubmit: SubmitHandler<SingInFormInputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<SingInFormInputs> = (data) => console.log(data)
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <FormControl isInvalid={Boolean(errors?.email)}>
         <FormLabel htmlFor="email">Email address</FormLabel>
-        <Input id="email" size="lg" {...register("email")} />
+        <Input id="email" size="lg" {...register('email')} />
         {errors?.email?.message && (
           <FormErrorMessage>{errors?.email?.message}</FormErrorMessage>
         )}
@@ -49,7 +49,7 @@ const SingInForm: FC = () => {
           type="password"
           size="lg"
           placeholder="*********"
-          {...register("password")}
+          {...register('password')}
         />
         {errors?.password?.message && (
           <FormErrorMessage>{errors?.password?.message}</FormErrorMessage>
@@ -66,7 +66,7 @@ const SingInForm: FC = () => {
         Sign in
       </Button>
     </form>
-  );
-};
+  )
+}
 
-export default SingInForm;
+export default SingInForm

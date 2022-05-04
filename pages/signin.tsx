@@ -1,3 +1,3 @@
-import SignIn from "screens/SignIn/SignIn";
+import SignIn from 'screens/SignIn/SignIn'
 
-export default SignIn;
+export default SignIn

@@ -1,6 +1,6 @@
-import { FC } from "react";
-import { Box, Flex, Heading } from "@chakra-ui/react";
-import SingInForm from "./SignInForm";
+import { FC } from 'react'
+import { Box, Flex, Heading } from '@chakra-ui/react'
+import SingInForm from './SignInForm'
 
 const SingIn: FC = () => {
   return (
@@ -12,7 +12,7 @@ const SingIn: FC = () => {
         <SingInForm />
       </Box>
     </Flex>
-  );
-};
+  )
+}
 
-export default SingIn;
+export default SingIn
