@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63577d52-07a8-405d-b938-14d0c4e2fe3a" name="Changes" comment="Installed all major required dependencies and updated gitignore.">
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/Home.module.css" beforeDir="false" />
+    <list default="true" id="63577d52-07a8-405d-b938-14d0c4e2fe3a" name="Changes" comment="Updated tsconfig to use absolute paths.">
+      <change afterPath="$PROJECT_DIR$/core/theme/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +37,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/danielzawadzki/Desktop/chatify/node_modules/prettier",
     "ts.external.directory.path": "/Users/danielzawadzki/Desktop/chatify/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -47,7 +50,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651662352293</updated>
-      <workItem from="1651662353937" duration="1430000" />
+      <workItem from="1651662353937" duration="2070000" />
     </task>
     <task id="LOCAL-00001" summary="Installed all major required dependencies and updated gitignore.">
       <created>1651662548500</created>
@@ -56,7 +59,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651662548500</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Deleted useless boilerplate code.">
+      <created>1651664706719</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1651664706719</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Updated tsconfig to use absolute paths.">
+      <created>1651665298624</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1651665298624</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -76,6 +93,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Installed all major required dependencies." />
     <MESSAGE value="Installed all major required dependencies and updated gitignore." />
-    <option name="LAST_COMMIT_MESSAGE" value="Installed all major required dependencies and updated gitignore." />
+    <MESSAGE value="Deleted useless boilerplate code." />
+    <MESSAGE value="Updated tsconfig to use absolute paths." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated tsconfig to use absolute paths." />
   </component>
 </project>
