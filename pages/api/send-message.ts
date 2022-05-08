@@ -7,5 +7,5 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
     username: req.body.username,
   })
 
-  res.status(200)
+  return res.status(200)
 }
