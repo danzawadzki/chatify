@@ -18,7 +18,10 @@ type AuthContextProps = {
   children: ReactNode
 }
 
-const AuthContext = createContext<AuthContextState | null>(null)
+const AuthContext = createContext<AuthContextState>({
+  setUsername: () => {},
+  logout: () => {},
+})
 
 const AuthProvider: FC<AuthContextProps> = ({ children }) => {
   const [username, setUsername] = useState<string>()
@@ -38,7 +41,7 @@ const AuthProvider: FC<AuthContextProps> = ({ children }) => {
   )
 }
 
-function useAuth() {
+const useAuth = () => {
   const context = useContext(AuthContext)
   if (context === undefined) {
     throw new Error('useAuth must be used within a AuthProvider')

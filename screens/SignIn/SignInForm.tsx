@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { useRouter } from 'next/router'
 import {
   Button,
   FormControl,
@@ -9,6 +10,7 @@ import {
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
+import { useAuth } from 'core/context/Auth.context'
 
 interface SingInFormInputs {
   username: string
@@ -16,11 +18,14 @@ interface SingInFormInputs {
 
 const SignInFormInputsSchema = yup
   .object({
-    username: yup.string().min(8).required(),
+    username: yup.string().min(3).required(),
   })
   .required()
 
 const SingInForm: FC = () => {
+  const { setUsername } = useAuth()
+  const { push } = useRouter()
+
   const {
     register,
     handleSubmit,
@@ -29,7 +34,10 @@ const SingInForm: FC = () => {
     resolver: yupResolver(SignInFormInputsSchema),
   })
 
-  const onSubmit: SubmitHandler<SingInFormInputs> = (data) => console.log(data)
+  const onSubmit: SubmitHandler<SingInFormInputs> = async (data) => {
+    setUsername(data.username)
+    await push('/chat')
+  }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
