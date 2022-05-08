@@ -4,7 +4,7 @@ import { HeadingProps } from '@chakra-ui/layout/dist/declarations/src/heading'
 
 const Logo: FC<HeadingProps> = (props) => {
   return (
-    <Heading as="h2" size="3xl" textAlign="center" {...props}>
+    <Heading as="h1" size="3xl" textAlign="center" {...props}>
       Chatify
     </Heading>
   )
