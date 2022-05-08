@@ -25,12 +25,9 @@ const ChatBar: FC = () => {
     >
       <Logo size="xl" />
       <Box display="flex" alignItems="center">
-        <Text display="flex">
-          Hello, you are logged as
-          <Text as="h2" fontWeight="bold" ml={1}>
-            {username}
-          </Text>
-          !
+        <Text display="flex">Hello, you are logged as !</Text>
+        <Text as="h2" fontWeight="bold" ml={1}>
+          {username || ''}
         </Text>
         <Button
           colorScheme="red"
