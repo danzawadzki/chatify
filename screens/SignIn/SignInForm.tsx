@@ -11,14 +11,12 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 
 interface SingInFormInputs {
-  email: string
-  password: string
+  username: string
 }
 
 const SignInFormInputsSchema = yup
   .object({
-    email: yup.string().email().required(),
-    password: yup.string().min(8).required(),
+    username: yup.string().min(8).required(),
   })
   .required()
 
@@ -35,24 +33,11 @@ const SingInForm: FC = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <FormControl isInvalid={Boolean(errors?.email)}>
-        <FormLabel htmlFor="email">Email address</FormLabel>
-        <Input id="email" size="lg" {...register('email')} />
-        {errors?.email?.message && (
-          <FormErrorMessage>{errors?.email?.message}</FormErrorMessage>
-        )}
-      </FormControl>
-      <FormControl mt={4} mb={4} isInvalid={Boolean(errors?.password)}>
-        <FormLabel htmlFor="password">Password</FormLabel>
-        <Input
-          id="password"
-          type="password"
-          size="lg"
-          placeholder="*********"
-          {...register('password')}
-        />
-        {errors?.password?.message && (
-          <FormErrorMessage>{errors?.password?.message}</FormErrorMessage>
+      <FormControl isInvalid={Boolean(errors?.username)} mb={2}>
+        <FormLabel htmlFor="email">Username</FormLabel>
+        <Input id="email" size="lg" {...register('username')} />
+        {errors?.username?.message && (
+          <FormErrorMessage>{errors?.username?.message}</FormErrorMessage>
         )}
       </FormControl>
       <Button
