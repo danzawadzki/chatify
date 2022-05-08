@@ -5,9 +5,11 @@ import {
   FormErrorMessage,
   Textarea,
 } from '@chakra-ui/react'
+import axios from 'axios'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
+import { yupResolver } from '@hookform/resolvers/yup'
+import { useAuth } from 'core/context/Auth.context'
 
 interface ChatMessageFormInputs {
   message: string
@@ -20,16 +22,23 @@ const ChatMessageFormInputsSchema = yup
   .required()
 
 const ChatMessageForm: FC = () => {
+  const { username } = useAuth()
   const {
-    register,
     handleSubmit,
+    register,
+    reset,
     formState: { errors, isSubmitting },
   } = useForm<ChatMessageFormInputs>({
     resolver: yupResolver(ChatMessageFormInputsSchema),
   })
 
-  const onSubmit: SubmitHandler<ChatMessageFormInputs> = (data) =>
-    console.log(data)
+  const onSubmit: SubmitHandler<ChatMessageFormInputs> = ({ message }) => {
+    axios.post('/api/send-message', {
+      message,
+      username,
+    })
+    return reset()
+  }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
