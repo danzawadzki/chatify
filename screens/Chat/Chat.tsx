@@ -16,8 +16,9 @@ const Chat: FC = () => {
   >([])
 
   useEffect(() => {
-    const pusher = PusherClient
-    const channel = pusher.subscribe(process.env.NEXT_PUBLIC_PUSHER_CHANNEL!)
+    const channel = PusherClient.subscribe(
+      process.env.NEXT_PUBLIC_PUSHER_CHANNEL!
+    )
 
     channel.bind(
       'message',
@@ -27,7 +28,7 @@ const Chat: FC = () => {
     )
 
     return () => {
-      pusher.unsubscribe('channel_name1')
+      PusherClient.unsubscribe('channel_name1')
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
